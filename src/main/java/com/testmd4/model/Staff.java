@@ -1,6 +1,7 @@
 package com.testmd4.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.Size;
 
 @Entity
@@ -12,6 +13,7 @@ public class Staff {
     private String staffCode;
     @Size(max = 15, message = "Tên quá dài")
     private String staffName;
+    @Min(value = 18, message = "Tuổi phải trên 18")
     private int staffAge;
     private int salary;
     @ManyToOne

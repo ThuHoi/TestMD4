@@ -27,6 +27,7 @@
             <tr>
                 <td>Age</td>
                 <td><input type="number"th:field="*{staffAge}" /></td>
+                <td colspan="2" style="color: red" th:if="${#fields.hasErrors('staffAge')}" th:errors="*{staffAge}"></td>
             </tr>
             <tr>
                 <td>Salary</td>

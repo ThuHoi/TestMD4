@@ -35,9 +35,24 @@
             <label>Branch</label>
             <input type="text" readonly name="branch" th:value="${staffDelete.branch.getNameBranch()}"/>
         </div>
-        <input type="submit" value="Remove"/>
+        <input type="submit" onclick="alert()" value="Remove"/>
     </form>
 </div>
+
+
+
+<script>
+    function alert() {
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Your work has been saved',
+            showConfirmButton: false,
+            timer: 10000
+        })
+
+    }
+</script>
 <footer th:replace="/layout :: footer"></footer>
 </body>
 </html>

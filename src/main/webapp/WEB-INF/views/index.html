@@ -18,7 +18,7 @@
 </div>
 <div>
     <form action="/staff/search" method="post">
-        <table>
+        <table >
             <tr>
                 <td>
                     <input type="text" placeholder="Search" name="search">
@@ -54,11 +54,11 @@
         <td style="text-align: center"><a type="button" class="btn btn-danger" th:href="@{/staff/{id}/delete(id=${s.getIdStaff()})}">DELETE</a></td>
     </tr>
     </tbody>
+
 </table>
+
 <!--<a th:if="${!staffs.isLast()}" th:href="@{staffs(page=${staffs.number + 1})}">>>></a>-->
 <!--<a th:if="${!staffs.isFirst()}" th:href="@{staffs(page=${staffs.number -1})}"><<<<</a>-->
-
-
 
 <a th:if="${staffs.hasPrevious()}"  th:href="@{/staff(page=${staffs.number}-1)}"><<<<<<<</a>
 <button th:each="i: ${#numbers.sequence(1, staffs.totalPages)}" class="btn btn-outline-secondary" th:text="(${i})" th:href="@{/staff(page=${i} - 1)}"></button>
